@@ -14,32 +14,33 @@ form {
 }
 
 
-.header{
+.head{
 
     color: white;
-     font-size: 20px ;
+     font-size: 25px ;
      font-family: montserrat;
     
 }
-.sidenav{
-background: rgb(252, 210, 134);
-font-size: 20px;
+.sidenavbar{
+background: rgb(160, 109, 109);
+font-size: 22px;
 position: fixed;
 z-index: 1;
 right: 0;
 top:0;
-width: 240px;
+width: 245px;
 height:100%;
 overflow-x: hidden;
 padding-top: 20px;
-
 transition: 00.5s;
 transition-property: left;
+flex-direction: column;
+align-items: flex-start;
 
 }
 
-.sidenav a{
-color: #fff;
+.sidenavbar a{
+color: rgb(2, 1, 1);
 display: block;
 width: 100%;
 line-height: 60px;
@@ -49,19 +50,19 @@ box-sizing: border-box;
 transition: 0.5s;
 transition-property: background;
 }
-.sidenav a:hover{
-    background: #04191d ;
+.sidenavbar a:hover{
+    background: #e3e5f0 ;
 }
 
-.sidenav i{
+.sidenavbar i{
     padding-right: 10px;
 }
 
 
 
 .large{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     background-color: #fff;
     margin: auto;
     padding:0px;
@@ -142,5 +143,58 @@ height: 30px;
 cursor: pointer;
 outline: none;word-wrap: none;
 font-size: 22px;
+
+}
+
+.toggle-button{
+position: absolute;
+top: .75rem;
+right:1rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 21px;
+}
+
+.toggle-button .bar{
+height: 3px;
+width: 100px;
+background-color: white;
+border-radius:  10px;
+
+}
+
+@media (max-width:400px){
+.toggle-button{
+
+    display: flex;
+}
+.navbar-links{
+    display: none;
+}
+
+
+}
+.navbar-links ul{
+
+    width: 100%;
+    flex-direction: column;
+}
+
+.navbar-links li{
+text-align: center;
+
+}
+
+.navbar-links li a{
+
+    padding: .5rem 1rem;
+}
+
+
+.navbar-links.active{
+
+display: flex;
 
 }
